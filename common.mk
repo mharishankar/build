@@ -455,9 +455,9 @@ filelist-tee-common: optee-client xtest optee-examples
 									>> $(fl); \
 	fi
 	@echo "# OP-TEE Client" 					>> $(fl)
-	@echo "file /bin/tee-supplicant $(OPTEE_CLIENT_EXPORT)/bin/tee-supplicant 755 0 0" \
+	@echo "file /bin/tee-supplicant $(OPTEE_CLIENT_EXPORT)/sbin/tee-supplicant 755 0 0" \
 									>> $(fl)
-	@echo "file /lib/libteec.so.1.0 $(OPTEE_CLIENT_EXPORT)/lib/libteec.so.1.0 755 0 0" \
+	@echo "file /lib/libteec.so.1.0 $(OPTEE_CLIENT_EXPORT)/lib/libteec.so.2.0 755 0 0" \
 									>> $(fl)
 	@echo "slink /lib/libteec.so.1 libteec.so.1.0 755 0 0"			>> $(fl)
 	@echo "slink /lib/libteec.so libteec.so.1 755 0 0" 			>> $(fl)
