@@ -138,6 +138,7 @@ linux-defconfig: $(LINUX_PATH)/.config
 
 LINUX_COMMON_FLAGS += ARCH=arm64
 
+KERNEL=7
 linux: linux-common
 	$(MAKE) -C $(LINUX_PATH) $(LINUX_COMMON_FLAGS) INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=$(MODULE_OUTPUT) modules_install deb-pkg
 
